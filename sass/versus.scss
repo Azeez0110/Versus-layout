@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "nullstyle";
+
+body {
+    background: #222222;
+    background-image: url(/img/background/backgrond.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Lato, sans-serif;
+    min-width: 980px;
+}
+
+.wrapper {
+    width: 980px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.header {
+    // .header__botton
+
+    &__button {
+        text-align: center;
+        margin: 40px 0px 140px;
+    }
+
+    &__link {
+        box-sizing: border-box;
+        background-color: transparent;
+        position: relative;
+        text-align: center;
+        font-size: 13px;
+        line-height: 19px;
+        text-transform: uppercase;
+        border: 1px solid #00d6b4;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 10px 26px;
+    }
+
+    &__link:hover:focus {
+        color: #ffffff;
+        outline: 0;
+    }
+
+    .hover {
+        border-color: #00d6b4;
+        color: #00d6b4;
+        background-image: linear-gradient(45deg, #00d6b4 50%, transparent 50%);
+        background-image: linear-gradient(45deg, #00d6b4 50%, transparent 50%);
+        background-position: 100%;
+        background-size: 400%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+    }
+
+    .hover:hover {
+        background-position: 0;
+        color: #ffffff;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        margin: 28px 0px 140px;
+    }
+}
+.logo {
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+}
+.menu {
+    // .menu__link
+
+    &__link {
+        position: relative;
+        font-size: 11px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #999999;
+        margin-right: 30px;
+    }
+
+    &__link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #00d6b4;
+        transition: width 0.5s;
+    }
+
+    &__link:hover::after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px; /* Высота линии */
+        background-color: #00d6b4; /* Цвет подчеркивания при появлении линии*/
+        transition: width 0.5s; /* Время эффекта */
+    }
+
+    &__link:last-child {
+        margin-right: 0px;
+    }
+
+    // .menu__link-active
+
+    &__link-active {
+        color: #00d6b4;
+    }
+}
+.title {
+    font-size: 48px;
+    line-height: 53px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0px;
+    max-width: 465px;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.title:hover {
+    box-shadow: 3px 3px #ffffff inset, -3px -3px #ffffff inset;
+}
+.content {
+    &__title {
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+        margin: 50px 0px 33px;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    // .grid__item
+
+    &__item {
+        border-radius: 4px;
+        margin-bottom: 22px;
+        margin-right: 20px;
+        display: inline-block;
+        box-shadow: 1px 1px #00d6b4, 2px 2px #00d6b4, 3px 3px #00d6b4,
+            4px 4px #00d6b4, 5px 5px #00d6b4, 6px 6px #00d6b4, 7px 7px #00d6b4;
+        //   transform: translateX(-7px);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .grid__item img {
+        border-radius: 4px;
+    }
+
+    &__item:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+    &__item:active {
+        box-shadow: 0px 0px #00d6b4, 0px 0px #00d6b4, 0px 0px #00d6b4,
+            0px 0px #00d6b4, 0px 0px #00d6b4, 0px 0px #00d6b4, 0px 0px #00d6b4;
+        transform: translateX(7px);
+    }
+}
+.footer {
+    // .footer__logo
+
+    &__logo {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #c2c2c2;
+        margin-top: 115px;
+    }
+
+    // .footer__text
+
+    &__text {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        color: #999999;
+        margin: 10px 0px 37px;
+    }
+}
